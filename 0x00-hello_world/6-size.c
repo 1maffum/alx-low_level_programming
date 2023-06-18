@@ -9,13 +9,13 @@ int main(void)
 	int b;
 	long int c;
 	long long int d;
-	float f'
+	float f;
 
-printf("Size of a char: %lu bytes($)\n", (unsigned long)sizeof(a));
-printf("Size of an int: %lu bytes($)\n", (unsigned long)sizeof(b));
-printf("Size of a long int: %lu bytes($)\n", (unsigned long)sizeof(c));
-printf("Size of a long long int: %lu bytes($)\n", (unsigned long)sizeof(d));
-printf("Size of a float: %lu bytes($)\n", (unsigned long)sizeof(f));
+printf("Size of a char: %zu bytes($)\n", (unsigned long)sizeof(a));
+printf("Size of an int: %zu bytes($)\n", (unsigned long)sizeof(b));
+printf("Size of a long int: %zu bytes($)\n", (unsigned long)sizeof(c));
+printf("Size of a long long int: %zu bytes($)\n", (unsigned long)sizeof(d));
+printf("Size of a float: %zu bytes($)\n", (unsigned long)sizeof(f));
 return (0);
 }
 
