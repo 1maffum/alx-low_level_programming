@@ -1,11 +1,23 @@
-#include <stdio.h>
 #include <unistd.h>
+
 /**
- *main - A C program that prints a lineto the standard error
- *Return: 1 (Successful)
+ * main - Entry point
+ *
+ * Description: Prints a message to the standard error
+ * without using printf or puts functions
+ *
+ * Return: Always 1
  */
 int main(void)
 {
-	fput("and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", stdout);
-	return (1);
+	const char *message = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+	ssize_t len = 0;
+
+	while (message[len] != '\0')
+		len++;
+
+	if (write(STDERR_FILENO, message, len) == -1)
+		return 1;
+
+	return 1;
 }
